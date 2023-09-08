@@ -1,0 +1,21 @@
+* {
+    font-family: 'Nunito'
+}
+
+.main{
+}
+
+.mt-login{
+    margin-top: 95px;
+}
+
+.mt-register{
+    margin-top: 60px;
+}
+
+.btn-custom{
+    height: 38px;
+    border-radius: 18px;
+    background: #733131;
+    color: #ffffff;
+}

@@ -1,13 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container mt-login">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-6">
             <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+                {{-- <div class="card-header">{{ __('Login') }}</div> --}}
 
                 <div class="card-body">
+                    <div class="d-flex justify-content-center mb-5">
+
+                        <div class="card-logo"><img src="{{ asset('img/logo.png') }}" alt="" height="66px" width="254px"></div>
+                    </div>
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
