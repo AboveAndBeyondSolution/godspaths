@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\TextData;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,21 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $textData = TextData::oldest()->get();
+
+        return view('home', compact('textData'));
     }
+
+    public function store(Request $request)
+    {
+        $validatedData = $request->validate([
+            'title' => 'required|max:255',
+            'body' => 'required',
+        ]);
+
+        TextData::create($validatedData);
+
+        return redirect('/home')->with('success', 'Text data has been added!');
+    }
+
 }
