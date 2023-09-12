@@ -16,8 +16,20 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/create', function () {
+    return view('create');
+});
+Route::get('/edit', function () {
+    return view('edit');
+});
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::post('/home', [App\Http\Controllers\HomeController::class, 'store']);
+Route::get('/delete/{id}', [App\Http\Controllers\HomeController::class, 'delete'])->name('delete');
+Route::get('/edit/{id}', [App\Http\Controllers\HomeController::class, 'edit'])->name('edit');
+Route::post('/update/{id}', [App\Http\Controllers\HomeController::class, 'update'])->name('update');
+
+
+
