@@ -23,6 +23,31 @@ Route::get('/edit', function () {
     return view('edit');
 });
 
+Route::get('/normalMeme', function () {
+    return view('subpages/normalMeme');
+});
+Route::get('/highEnergyMeme', function () {
+    return view('subpages/highEnergyMeme');
+});
+Route::get('/recommendRead', function () {
+    return view('subpages/recommendRead');
+});
+Route::get('/recommendWatch', function () {
+    return view('subpages/recommendWatch');
+});
+Route::get('/recommendMusic', function () {
+    return view('subpages/recommendMusic');
+});
+Route::get('/recommendGame', function () {
+    return view('subpages/recommendGame');
+});
+Route::get('/recommendWebsite', function () {
+    return view('subpages/recommendWebsite');
+});
+Route::get('/shareThePath', function () {
+    return view('subpages/shareThePath');
+});
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
