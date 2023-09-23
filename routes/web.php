@@ -47,6 +47,18 @@ Route::get('/recommendWebsite', function () {
 Route::get('/shareThePath', function () {
     return view('subpages/shareThePath');
 });
+Route::get('/myPage', function () {
+    return view('mypage/myPage');
+});
+Route::get('/mySpace', function () {
+    return view('mypage/mySpace');
+});
+Route::get('/profile', function () {
+    return view('mypage/myPage');
+});
+Route::get('/resetPassword', function () {
+    return view('mypage/myPage');
+});
 
 Auth::routes();
 

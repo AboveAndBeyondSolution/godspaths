@@ -62,7 +62,7 @@
                     <div class="text">Recommend Read</div>
                 </a>
             </div>
-            <div class="item">
+            {{-- <div class="item">
                 <a href="recommendWatch">
                     <img src="http://placekitten.com/301/301">
                     <div class="text">Recommend Watch</div>
@@ -73,22 +73,22 @@
                     <img src="http://placekitten.com/309/305">
                     <div class="text">Recommend Music</div>
                 </a>
-            </div>
+            </div> --}}
             <div class="item">
-                <a href="recommendGames">
+                <a href="recommendGame">
                     <img src="http://placekitten.com/305/301">
                     <div class="text">Recommend Game</div>
                 </a>
             </div>
             <div class="item">
-                <a href="recommendWebsites">
+                <a href="recommendWebsite">
                     <img src="http://placekitten.com/305/305">
                     <div class="text">Recommend Website</div>
                 </a>
             </div>
             <div class="item">
                 <a href="shareThePath">
-                    <img src="http://placekitten.com/304/303">
+                    <img src="http://placekitten.com/298/303">
                     <div class="text">Share The PATH</div>
                 </a>
             </div>

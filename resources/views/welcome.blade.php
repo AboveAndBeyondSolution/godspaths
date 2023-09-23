@@ -441,7 +441,7 @@
             <img src="{{ asset('img/banner.jpg') }}" alt="" class="banner-image" height="100%"
             width="100%">
             <h2 class="banner-text">
-                Welcome to the Godspaths!
+                Welcome to the Godspaths !
             </h2>
         </div>
         </div>
