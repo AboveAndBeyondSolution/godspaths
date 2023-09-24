@@ -87,7 +87,7 @@
                 </a>
             </div>
             <div class="item">
-                <a href="shareThePath">
+                <a href="{{ url('/shareThePath') }}">
                     <img src="http://placekitten.com/298/303">
                     <div class="text">Share The PATH</div>
                 </a>
@@ -96,3 +96,5 @@
         </div>
     </div>
 @endsection
+
+
