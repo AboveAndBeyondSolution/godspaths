@@ -13,9 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Auth::routes();
+
 Route::get('/create', function () {
     return view('create');
 });
@@ -47,9 +46,7 @@ Route::get('/recommendWebsite', function () {
 Route::get('/shareThePath', function () {
     return view('subpages/shareThePath');
 });
-Route::get('/myPage', function () {
-    return view('mypage/myPage');
-});
+
 Route::get('/mySpace', function () {
     return view('mypage/mySpace');
 });
@@ -60,10 +57,15 @@ Route::get('/resetPassword', function () {
     return view('mypage/resetPassword');
 })->name('resetPassword');
 
-Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::post('/home', [App\Http\Controllers\HomeController::class, 'store']);
+Route::get('/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('admin.dashboard');
+
+Route::get('/myPage', [App\Http\Controllers\MyPage\MyPageController::class, 'index'])->name('my_page');
+
+
+
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::post('/', [App\Http\Controllers\HomeController::class, 'store']);
 Route::get('/delete/{id}', [App\Http\Controllers\HomeController::class, 'delete'])->name('delete');
 Route::get('/edit/{id}', [App\Http\Controllers\HomeController::class, 'edit'])->name('edit');
 Route::post('/update/{id}', [App\Http\Controllers\HomeController::class, 'update'])->name('update');
@@ -74,5 +76,8 @@ Route::get('/resetPassword/{token}', 'Auth\ResetPasswordController@showResetForm
 Route::post('/user/update_password', [App\Http\Controllers\UserController::class, 'update_password'])->name('user.update_password');
 
 
+Route::get('/admin/login', [App\Http\Controllers\AdminController::class, 'showLoginForm'])->name('admin.login');
+
+Route::post('/admin/login', [App\Http\Controllers\AdminController::class, 'login'])->name('admin.login.submit');
 
 

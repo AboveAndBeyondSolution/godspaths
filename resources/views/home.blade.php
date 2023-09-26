@@ -46,19 +46,19 @@
         <div class="item-container">
             <div class="item">
                 <a href="highEnergyMeme">
-                    <img src="http://placekitten.com/300/300">
+                    <img src="http://placekitten.com/300/200">
                     <div class="text">High Energy Meme</div>
                 </a>
             </div>
             <div class="item">
                 <a href="normalMeme">
-                    <img src="http://placekitten.com/299/299">
+                    <img src="http://placekitten.com/299/200">
                     <div class="text">Normal Meme</div>
                 </a>
             </div>
             <div class="item">
                 <a href="recommendRead">
-                    <img src="http://placekitten.com/300/301">
+                    <img src="http://placekitten.com/300/202">
                     <div class="text">Recommend Read</div>
                 </a>
             </div>
@@ -76,19 +76,19 @@
             </div> --}}
             <div class="item">
                 <a href="recommendGame">
-                    <img src="http://placekitten.com/305/301">
+                    <img src="http://placekitten.com/305/200">
                     <div class="text">Recommend Game</div>
                 </a>
             </div>
             <div class="item">
                 <a href="recommendWebsite">
-                    <img src="http://placekitten.com/305/305">
+                    <img src="http://placekitten.com/305/199">
                     <div class="text">Recommend Website</div>
                 </a>
             </div>
             <div class="item">
                 <a href="{{ url('/shareThePath') }}">
-                    <img src="http://placekitten.com/298/303">
+                    <img src="http://placekitten.com/298/195">
                     <div class="text">Share The PATH</div>
                 </a>
             </div>

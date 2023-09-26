@@ -14,7 +14,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        // $this->middleware('auth');
     }
 
     /**
@@ -63,7 +63,7 @@ class HomeController extends Controller
 
     //     return redirect()->route('home')->with('status', 'Blog updated successfully!');
 
-        
+
     // }
     public function update(Request $request, $id)
 {
