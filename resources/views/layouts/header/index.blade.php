@@ -1,8 +1,8 @@
-<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+<nav class="navbar navbar-expand-md navbar-light bg-white nav-shadow">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
             {{-- {{ config('app.name', 'Laravel') }} --}}
-            <div class="card-logo"><img src="{{ asset('img/logo.png') }}" alt="" height="40px" width="154px"></div>
+            <div class="card-logo"><img src="{{ asset('img/logo.png') }}" alt="" height="38px" width="150px"></div>
 
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"

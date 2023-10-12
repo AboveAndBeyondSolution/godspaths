@@ -62,4 +62,14 @@ class User extends Authenticatable
     public function getUserRoleName() {
         return self::$arrRoleName[$this->role];
     }
+
+    public function highMemes()
+    {
+        return $this->hasMany(HighMeme::class);
+    }
+
+    public function normalMemes()
+    {
+        return $this->hasMany(NormalMeme::class);
+    }
 }

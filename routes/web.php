@@ -62,8 +62,6 @@ Route::get('/dashboard', [App\Http\Controllers\Admin\DashboardController::class,
 
 Route::get('/myPage', [App\Http\Controllers\MyPage\MyPageController::class, 'index'])->name('my_page');
 
-
-
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::post('/', [App\Http\Controllers\HomeController::class, 'store']);
 Route::get('/delete/{id}', [App\Http\Controllers\HomeController::class, 'delete'])->name('delete');
@@ -80,4 +78,22 @@ Route::get('/admin/login', [App\Http\Controllers\AdminController::class, 'showLo
 
 Route::post('/admin/login', [App\Http\Controllers\AdminController::class, 'login'])->name('admin.login.submit');
 
+/* High Meme Route */
+Route::get('/my/high-meme', [App\Http\Controllers\MySpace\HighMemeController::class, 'index'])->name('my_space.high_meme.index');
+Route::get('/my/high-meme/upload', [App\Http\Controllers\MySpace\HighMemeController::class, 'create'])->name('my_space.high_meme.create');
+Route::post('/my/high-meme/upload', [App\Http\Controllers\MySpace\HighMemeController::class, 'store'])->name('my_space.high_meme.store');
 
+Route::get('/my/high-meme/edit/{high_meme}', [App\Http\Controllers\MySpace\HighMemeController::class, 'edit'])->name('my_space.high_meme.edit');
+Route::post('/my/high-meme/update/{high_meme}', [App\Http\Controllers\MySpace\HighMemeController::class, 'update'])->name('my_space.high_meme.update');
+
+Route::delete('/my/high-meme/{high_meme}', [App\Http\Controllers\MySpace\HighMemeController::class, 'destroy'])->name('my_space.high_meme.destory');
+
+/* Normal Meme Route */
+Route::get('/my/normal-meme', [App\Http\Controllers\MySpace\NormalMemeController::class, 'index'])->name('my_space.normal_meme.index');
+Route::get('/my/normal-meme/upload', [App\Http\Controllers\MySpace\NormalMemeController::class, 'create'])->name('my_space.normal_meme.create');
+Route::post('/my/normal-meme/upload', [App\Http\Controllers\MySpace\NormalMemeController::class, 'store'])->name('my_space.normal_meme.store');
+
+Route::get('/my/normal-meme/edit/{normal_meme}', [App\Http\Controllers\MySpace\NormalMemeController::class, 'edit'])->name('my_space.normal_meme.edit');
+Route::post('/my/normal-meme/update/{normal_meme}', [App\Http\Controllers\MySpace\NormalMemeController::class, 'update'])->name('my_space.normal_meme.update');
+
+Route::delete('/my/normal-meme/{normal_meme}', [App\Http\Controllers\MySpace\NormalMemeController::class, 'destroy'])->name('my_space.normal_meme.destory');
