@@ -9,7 +9,7 @@
         <!-- Sidebar -->
         <div class="mx-5 mt-3 border d-flex p-1 rounded">
 
-            <div class="col-3 border-right">
+            <div class="col-2 border-right">
                 <ul class="nav flex-column">
                     <li class="nav-item">
                         <a class="nav-link {{ Request::is('mySpace') ? 'active' : '' }}" href="{{ url('mySpace') }}">My
@@ -26,7 +26,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-8">
+            <div class="col-10">
                 @yield('rightSideContent')
             </div>
         </div>
